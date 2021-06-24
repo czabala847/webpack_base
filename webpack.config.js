@@ -17,6 +17,7 @@ module.exports = {
     assetModuleFilename: "assets/images/[hash][ext][query]",
   },
 
+  mode: "production",
   //que va a trabajar
   resolve: {
     extensions: [".js"],
