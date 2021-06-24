@@ -3,10 +3,13 @@ const htmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpack = require("copy-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
+const BundleAnalyzerPlugin =
+  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 module.exports = {
   entry: "./src/index.js",
   output: {
+    clean: true,
     //en que directorio se encuentra nuestro proyecto
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash].js",
@@ -79,6 +82,7 @@ module.exports = {
       ],
     }),
     new Dotenv(),
+    new BundleAnalyzerPlugin(),
   ],
 
   devServer: {
