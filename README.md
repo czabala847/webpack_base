@@ -13,3 +13,5 @@ Este proyecto es una configuración básica de webpack, para que pueda ser usado
 - Implementación de alias
 - Configuración de modos de producción y desarrollo
 - Deploy a Netlify
+- Configuración webpack dev server
+- Webpack analyzer
